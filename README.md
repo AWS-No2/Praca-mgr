@@ -1,3 +1,4 @@
+[![DOI](https://zenodo.org/badge/1290169035.svg)](https://doi.org/10.5281/zenodo.21208697)
 Autor: Alicja Sójka
 Instytucja: Szkoła Główna Gospodarstwa Wiejskiego w Warszawie, Wydział Hodowli, Bioinżynierii i Ochrony Zwierząt
 Rok: 2026
