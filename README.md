@@ -31,6 +31,12 @@ Repozytorium składa się z czterech głównych skryptów analitycznych:
    Oblicza procent tożsamości badanych sekwencji (w tym sekwencji referencyjnych dla różnych gatunków)
    w stosunku do wybranej sekwencji referencyjnej, eksportując wyniki do pliku .csv w formie raportu.
    Pozwala na zastosowanie zarówno metody globalnej, jak i overlap algorytmu Needleman-Wunscha.
+5. Wizualizacje.R
+   Tworzy MSA, a następnie odpowiednie wizualizacje do przedstawienia różnic w dopasowaniu sekwencji.
+6. Concat tabular.R
+   Umożliwia połączenie plików tabular z danymi pokrycia z sekwencjonowania całogenomowego według pozycji genomowej (#CHROM i POS).
+   Zawiera kod do stworzenia raportu głębokości pokrycia - dla całości sekwencji, osobno eksonu 2 i intronu 2, a także
+   wizualizacji w postaci wykresu liniowego głębokości pokrycia dla każdej pozycji według prób z podziałem na ekson i intron.  
 
 DOSTĘPNOŚĆ DANYCH (DATA AVAILABILITY):
 **Surowe chromatogramy (pliki .ab1) nie zostały udostępnione w tym repozytorium** ze względu na zasady
@@ -43,6 +49,9 @@ które pozwalają na przetestowanie działania pozostałych części kodu (dopas
 Użytkownicy chcący przetestować pełen workflow mogą podstawić własne pliki .ab1, zachowując odpowiednią strukturę
 folderów opisaną w kodzie.
 
+W folderze data/ udostępniono również merged_coverage.csv zawierający dane o głębokości pokrycia 
+dla badanych prób z sekwencjonowania WGS, który można wykorzystać do sprawdzenia działania skryptu Concat tabular.R.
+
 WYMAGANIA TECHNICZNE I PAKIETY:
 Do uruchomienia skryptów wymagana jest instalacja środowiska R oraz następujących pakietów 
 (głównie z repozytorium Bioconductor):
@@ -52,6 +61,14 @@ msa
 pwalign
 sangerseqR
 sangeranalyseR
+dplyr
+tidyr
+purrr
+readr
+writexl
+paletteer
+ggplot2
+ggmsa
 
 LICENCJA:
 Ten projekt jest udostępniany na warunkach licencji MIT. Szczegóły znajdują się w pliku LICENSE.
